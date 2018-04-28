@@ -1,24 +1,14 @@
 import React, {Component} from 'react';
-import {
-    Platform,
-    StyleSheet,
-    Text,
-    View,
-    Button
-} from 'react-native';
 
-export default class Home extends Component {
+import AdView from './components/ad-view/';
+
+export default class Main extends Component {
+
     render() {
         return (
-            <View>
-                <Text>启动页</Text>
-                <Button
-                    onPress={() => {
-                        this.props.navigation.navigate('Home');
-                    }}
-                    title='进入首页'
-                ></Button>
-            </View>
+            <AdView
+                navigation={this.props.navigation}
+                img={{uri: 'http://img.zcool.cn/community/01b294598c34f7a8012156030c172c.jpg'}}/>
         );
     }
 };
